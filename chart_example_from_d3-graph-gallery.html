@@ -19,7 +19,7 @@
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 60},
+var margin = {top: 10, right: 100, bottom: 30, left: 60},
     width = 1250 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -65,7 +65,7 @@ d3.csv("https://raw.githubusercontent.com/MaouOni/D3-example/main/connectedscatt
       .attr("stroke", "black")
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
-        .curve(d3.curveBasis) // Just add that to have a curve instead of segments
+        //.curve(d3.curveBasis) // Just add that to have a curve instead of segments
         .x(function(d) { return x(d.date) })
         .y(function(d) { return y(d.value) })
         )
